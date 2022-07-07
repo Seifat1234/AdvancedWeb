@@ -1,0 +1,23 @@
+<div>
+  <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Medicine</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let xn of customer">
+        <td>{{xn.id}}</td>
+        <td>{{xn.name}}</td>
+        <td>{{xn.email}}</td>
+        <td>{{xn.medicine}}</td>
+        <td>
+          <button type = "button" class="btn btn-success">update</button>
+          <button  (click)="deleteCustomer(xn.id)"  type = "button" class="btn btn-danger">delete</button>
+        </td>
+
+      </tr>
+  </table>
+</div>
+  <router-outlet></router-outlet>
